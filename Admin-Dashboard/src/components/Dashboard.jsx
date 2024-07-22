@@ -13,7 +13,7 @@ const Dashboard = () => {
     const fetchAppointments = async () => {
       try {
         const { data } = await axios.get(
-          "http://localhost:4000/api/user/appointment/getAllAppointments",
+          "https://hospital-management-backend-nu.vercel.app/api/user/appointment/getAllAppointments",
           { withCredentials: true }
         );
         setAppointments(data.appointments);
@@ -27,7 +27,7 @@ const Dashboard = () => {
   const handleUpdateStatus = async (appointmentId, status) => {
     try {
       const { data } = await axios.put(
-        `http://localhost:4000/api/user/appointment/update/${appointmentId}`,
+        `https://hospital-management-backend-nu.vercel.app/api/user/appointment/update/${appointmentId}`,
         { status },
         { withCredentials: true }
       );

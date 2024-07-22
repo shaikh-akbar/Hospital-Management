@@ -10,7 +10,7 @@ const Message = () => {
   useEffect(()=>{
     const fetchMessages = async () => {
       try {
-        const { data } = await axios.get('http://localhost:4000/api/user/message/admin/getAllMessages',{withCredentials:true})
+        const { data } = await axios.get('https://hospital-management-backend-nu.vercel.app/api/user/message/admin/getAllMessages',{withCredentials:true})
         setMessages(data.messages)
       } catch (error) {
         console.log('ERROR OCCURED WHILE FETCHING',error)

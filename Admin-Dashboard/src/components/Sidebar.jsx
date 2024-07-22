@@ -39,7 +39,7 @@ const Sidebar = () => {
         setShow(!show)
     }
     const handleLogout = async () => {
-        await axios.get('http://localhost:4000/api/user/admin/logout', { withCredentials: true }).then((res) => {
+        await axios.get('https://hospital-management-backend-nu.vercel.app/api/user/admin/logout', { withCredentials: true }).then((res) => {
             toast.success(res.data.message)
             setIsAuthenticated(false)
         }).catch((err) => {

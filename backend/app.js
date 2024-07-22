@@ -19,7 +19,6 @@ app.use(cors({
     methods: ["GET", "PUT", "POST", "DELETE"],
     credentials: true,
 }));
-dbConnection()
 
 app.use(cookieParser());
 app.use(express.json());
@@ -28,6 +27,7 @@ app.use(fileupload({
     useTempFiles: true,
     tempFileDir: "/tmp/"
 }));
+dbConnection()
 
 app.use('/api/user/message', messageRouter);
 app.use('/api/user',authRouter)

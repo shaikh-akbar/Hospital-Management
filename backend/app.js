@@ -19,6 +19,7 @@ app.use(cors({
     methods: ["GET", "PUT", "POST", "DELETE"],
     credentials: true,
 }));
+dbConnection()
 
 app.use(cookieParser());
 app.use(express.json());
@@ -33,7 +34,6 @@ app.use('/api/user',authRouter)
 app.use('/api/user/appointment',appointmentRouter)
 dbConnection();
 
-dbConnection()
 app.use(errorMiddleware)
 
 export default app;

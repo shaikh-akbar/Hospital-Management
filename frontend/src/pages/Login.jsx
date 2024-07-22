@@ -19,7 +19,7 @@ const Login = () => {
   const handleLogIn = async (e) => {
     e.preventDefault()
     try {
-      const response = await axios.post('http://localhost:4000/api/user/patient/login',
+      const response = await axios.post('https://hospital-management-backend-nu.vercel.app/api/user/patient/login',
         {email,password,confirmPassword,role:'Admin'},
         {
         withCredentials:true,

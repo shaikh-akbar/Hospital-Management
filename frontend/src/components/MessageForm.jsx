@@ -13,7 +13,7 @@ const MessageForm = () => {
     e.preventDefault();
     try {
       await axios.post(
-        "http://localhost:4000/api/user/message/send",
+        "https://hospital-management-backend-nu.vercel.app/api/user/message/send",
         {firstName,lastName,email,phone,message},
         {
           withCredentials:true,

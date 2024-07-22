@@ -14,7 +14,7 @@ const Navbar = () => {
 
 
     const handleLogout = async () =>{
-        await axios.get('http://localhost:4000/api/user/patient/logout',{withCredentials:true}).then((res)=>{
+        await axios.get('https://hospital-management-backend-nu.vercel.app/api/user/patient/logout',{withCredentials:true}).then((res)=>{
             toast.success(res.data.message)
             setIsAuthenticated(false)
         }).catch((err)=>{

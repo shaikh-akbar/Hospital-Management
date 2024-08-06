@@ -50,7 +50,7 @@ const AppointmentForm = () => {
         try {
           const hasVisitedBool = Boolean(hasVisited);
           const { data } = await axios.post(
-            "http://localhost:4000/api/user/appointment/post/appointment",
+            "https://hospital-management-backend-nu.vercel.app/api/user/appointment/post/appointment",
             {
               firstName,
               lastName,
